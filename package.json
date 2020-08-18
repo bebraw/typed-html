@@ -1,5 +1,5 @@
 {
-  "name": "typed-html",
+  "name": "@bebraw/typed-html",
   "version": "2.0.0",
   "description": "TypeSafe HTML templates using TypeScript. No need to learn a template library.",
   "main": "src/elements.js",
