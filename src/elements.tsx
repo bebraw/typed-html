@@ -9,7 +9,7 @@ export type Children = {
 };
 
 export interface CustomElementHandler {
-    (attributes: Attributes & Children, contents: string[]): string;
+    (attributes: Attributes & Children): string;
 }
 
 export interface Attributes {
@@ -113,10 +113,8 @@ const isVoidElement = (tagName: string) => {
 export function createElement(name: string | CustomElementHandler,
     attributes: Attributes & Children | undefined = {},
     ...contents: string[]) {
-    const children = attributes && attributes.children || contents;
-
     if (typeof name === 'function') {
-        return name(children ? { children, ...attributes } : attributes, contents);
+        return name({ children: contents, ...attributes });
     } else {
         const tagName = toKebabCase(name);
         if (isVoidElement(tagName) && !contents.length) {
