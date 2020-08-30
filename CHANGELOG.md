@@ -1,3 +1,17 @@
+# [2.1.0](https://github.com/nicojs/typed-html/compare/v2.0.0...v2.1.0) (2020-08-30)
+
+
+### Bug Fixes
+
+* Fix typing ([4a1e5ea](https://github.com/nicojs/typed-html/commit/4a1e5ea))
+
+
+### Features
+
+* Add initial implementation ([c6fbb0a](https://github.com/nicojs/typed-html/commit/c6fbb0a))
+
+
+
 ### Features
 
 * Support React-style `children` within `elements.Attributes`.
